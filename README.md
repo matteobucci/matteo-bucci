@@ -66,13 +66,60 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
 
     3 new dependencies just to display a picture? I love it!
 
-    
+3.  **GraphQL**
+
+    This is something I was curious about. How Gatsby is going to use GraphQL?
+
+    First of all, when developing a website, it provides a great interface at 
+
+    ```http://localhost:8000/___graphql```
 
 
+    Looks like everything can be queried, from the site metadata to the structure itself.
+
+    ```graphql
+    query MyQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+    ```
+
+  Accessing data is used by the method ```useStaticQuery```. This is cool, because it shows how all this queries are executed at build time and served statically.
+
+  I bet there is a method to do dynamic queries as well.
 
 
-    
+4.  **SEO Compoonent**
 
+    The tutorial wants me to create a SEO component that queries the metadata and use it as default when a title is not provided as prop.
+
+    This is interesting. This component is then used into Head component.
+
+    I can also hide the useStaticQuery behind a custom react hooks.
+
+    So instead oif having something like
+
+    ```
+     const data = useStaticQuery(graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `)
+
+    ```
+
+    We can refactor into:
+
+    ```
+
+    ```
 
 ## 🚀 Sparse notes
 

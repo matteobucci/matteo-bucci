@@ -11,6 +11,7 @@ Skills I want to improve by doing so
 - Modern react
 - Gatbsy and its platform
 - Markdown writing
+- Graphql
 - Tooling and IDE
 
 What I would like to see on my website
@@ -47,6 +48,9 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
     npm run develop
     ```
 
+    *First issue encountered!* I cannot use Node 20. I need to use Node 18. It's ok, they say at least 18.
+
+
     A lot of things are done by yourself, like the first commit of the repository. I wanted to create a repository on the parent folder, but I guess if I want to keep the deployment simple I better stay with this.
 
     The only thing I'm not sure so far, is how can I have a .tsx file and typing correctly the props. So I temporarely converted the pages into .js and it seems to stop complaining.
@@ -56,24 +60,20 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
 
     Now it's start to deep dive into the plugins. The ecosystems seem huge and even the smaller task can be delegated to a plugin. But I understand the concept. On a web increasingly complex, even the task of render a picture can be dependent on so many factors that is better to hide behind a nice abstraction.
 
+    ```shell
+    npm install gatsby-plugin-image gatsby-plugin-sharp gatsby-source-filesystem
+    ```
 
-3.  **Open the code and start customizing!**
+    3 new dependencies just to display a picture? I love it!
 
-    Your site is now running at http://localhost:8000!
+    
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## 🚀 Quick start (Netlify)
+    
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+## 🚀 Sparse notes
+
+I don't have any at the moment :) Thank you for stopping by

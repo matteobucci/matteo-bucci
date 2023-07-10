@@ -118,6 +118,19 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
     We can refactor into:
 
     ```
+    const useSiteMetadata = () => {
+      const data = useStaticQuery(graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `)
+
+      return data.site.siteMetadata
+    }
 
     ```
 

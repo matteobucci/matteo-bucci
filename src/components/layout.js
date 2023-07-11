@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 import { Navigation } from './navigation'
+import { Footer } from './footer'
 import {
   container
 } from './layout.module.css'
@@ -43,6 +44,7 @@ const Layout = ({ pageTitle, children }) => {
       )}
       <Navigation onUpdateTheme={onUpdateTheme} theme={theme} />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }

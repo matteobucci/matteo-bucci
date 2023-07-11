@@ -284,6 +284,7 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
     - Investigate on how styling works
     - Add new content and a nice navigation
     - Fix first margin on navigation
+    - Refactor a footer adding a linkedin link 
 
 
 

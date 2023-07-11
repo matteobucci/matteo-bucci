@@ -20,7 +20,15 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/static/`,
+      },
+    },
+
   ],
 }
 

@@ -224,7 +224,68 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
 
 1.  **Theming, dark mode and light mode?**
 
-    Soon to be discovered! :)
+    Implementing a dark mode was not so difficult after all.
+
+    First of all, I needed to implement a theme on the css at all!
+
+    So, how css can be implemented?
+
+    By importing it on the components we are working on!
+
+    ```
+    // Import from a CSS file in your src
+    import "../styles/index.css"
+    // Import from an installed package
+    import "bootstrap/dist/css/bootstrap.min.css"
+
+    ```
+
+    Setting the dark theme is not something absolutely impossible. A lot pass through the layout file, that imports the style and can also override some styles with the dark theme.
+
+    ```
+      {theme === "dark" && (
+        <link rel="stylesheet" type="text/css" href="/dark-mode.css" />
+      )}
+    ```
+
+    The variable ```theme``` can be changed as every other state variable in react.
+
+    And just like this you get an amazing dark mode on request! Hurray! But, there is a problem
+
+    If you do so, every time you change page you get a white flash while in dark mode.
+
+    The issue is that Layout, used as wrapper element for every page component, is not wrapper enaugh and get reloaded.
+
+    The solution to fix this is twofold:
+
+    1 - add a gatsby-browser file like this
+      ```
+      const React = require('react')
+
+      export function wrapPageElement({ element, props }) {
+        const Layout = element.type.Layout ?? React.Fragment
+
+        return <Layout {...props}>{element}</Layout>
+      }
+
+      ```
+    2 - add a similar line on every page
+
+    ```IndexPage.Layout = Layout;```
+
+    And of course, this is under documented and it's not clear at all. The page has a 'Layout' field ready to be set, but nobody told you so.
+
+    How I found out this? Thanks to my inspiration for this project, the website of [https://taniarascia.com](taniarascia.com)
+
+    
+
+
+    TODO NEXT:
+    - Investigate on how styling works
+    - Add new content and a nice navigation
+
+
+
 
 ## 🚀 Sparse notes
 

@@ -8,18 +8,19 @@ import Seo from '../components/seo'
 // Step 2: Define your component
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Homepage">
-        <p>I'm making this by following the Gatsby Tutorial.</p>
-       
-          <StaticImage
-          alt="Myself, Matteo Bucci when I was around 8"
-          src="../images/matteo-2003.jpg"
-        />
-    </Layout>
-  )
+    <div>
+      <p>I'm making this by following the Gatsby Tutorial.</p>
+
+      <StaticImage
+        alt="Myself, Matteo Bucci when I was around 8"
+        src="../images/matteo-2003.jpg"
+      />
+    </div>
+  );
 }
 
-// You'll learn about this in the next task, just copy it for now
+IndexPage.Layout = Layout;
+
 export const Head = () => <Seo title="Home Page" />
 
 // Step 3: Export your component

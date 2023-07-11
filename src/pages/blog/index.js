@@ -8,7 +8,7 @@ const BlogPage = ({ data }) => {
 
   
   return (
-    <Layout pageTitle="My Blog Posts">
+    <div>
       <p>My cool posts will go in here</p>
       {
         data.allMdx.nodes.map((node) => (
@@ -23,9 +23,11 @@ const BlogPage = ({ data }) => {
           </article>
         ))
       }
-    </Layout>
+    </div>
   )
 }
+
+BlogPage.Layout = Layout
 
 export const query = graphql`
   query {

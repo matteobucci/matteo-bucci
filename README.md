@@ -134,6 +134,22 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
 
     ```
 
+
+4.  **MDX Support**
+
+    Looks very cool!
+
+    ```shell
+    npm install gatsby-plugin-mdx @mdx-js/react
+    ```
+
+    Interestingly, @mdx-js/react maps the implementation of the plugin into reacts component. I wonder why this cannot be a dependency of the plugin, since we are dealing with react in any case.
+
+    The remark itself, can use plugins to enanche its features, like code coloring, ecc.
+
+    A plugin makes available to GrapQL new data that can be queried! This is cool
+
+  
 ## 🚀 Sparse notes
 
 I don't have any at the moment :) Thank you for stopping by

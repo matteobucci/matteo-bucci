@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import React, { useEffect, useState } from 'react'
+import { Navigation } from './navigation'
 import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle
+  container
 } from './layout.module.css'
 
 import '../styles/style.css'
 
-import moon from '../assets/moon.png'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -46,42 +41,8 @@ const Layout = ({ pageTitle, children }) => {
       {theme === "dark" && (
         <link rel="stylesheet" type="text/css" href="/dark-mode.css" />
       )}
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/projects" className={navLinkText}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <div className="theme-toggle">
-              <button onClick={onUpdateTheme}>
-                <img src={moon} alt="Theme" />
-              </button>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
-        {children}
-      </main>
+      <Navigation onUpdateTheme={onUpdateTheme} theme={theme} />
+      <main>{children}</main>
     </div>
   );
 }

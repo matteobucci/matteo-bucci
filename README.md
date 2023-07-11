@@ -135,7 +135,7 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
     ```
 
 
-4.  **MDX Support**
+5.  **MDX Support**
 
     Looks very cool!
 
@@ -147,9 +147,85 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
 
     The remark itself, can use plugins to enanche its features, like code coloring, ecc.
 
-    A plugin makes available to GrapQL new data that can be queried! This is cool
+    A plugin makes available to GrapQL new data that can be queried! And I must admit that the graph explorer is quite cool to work with.
 
   
+6.  **Page routing**
+
+    Dynamic pages to route dynamic data. Looks similar to what NextJS does.
+
+    Looks like that whener we enter into a page, a pageContext is populated
+
+    ```js
+    Object {
+      // ...
+      pageContext: Object {
+        id: "11b3a825-30c5-551d-a713-dd748e7d554a"
+        frontmatter__slug: "my-first-post"
+      }
+      // ...
+    }
+    ```
+
+  And the exported object query is the ones that can use these info to query the data it needs to use.
+
+
+7.  **Gatsby picture**
+    Looks like that Gatsby allow to an even more dinamic version of the picture element. Not only we want to be dynamic on the loading of the picture, but also dynamic on how the picture is managed.
+
+    Of course a new plugin is needed but they don't scare me anymore.
+
+    ```shell
+    npm install gatsby-transformer-sharp
+    ```
+
+    This allow to import what we have on the mdx data into our page.
+  
+
+
+## 🚀 Further explorations
+
+1.  **Having multiples, separate blogs?**
+
+    Yes, it's feasable, on a side we can have multible folders configured into the gatsby-plugins folder
+
+    ```ts
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog/`,
+      },
+    }
+    ```
+
+    The issue is that we still need to filter the mdx values into the query, because they are all made available to graphql under the same "collection"
+
+    ```graphql
+     query {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/second-blog/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        nodes {
+          frontmatter {
+            date(formatString: "MMMM D, YYYY")
+            title
+            slug
+          }
+          id
+          excerpt
+        }
+      }
+    }
+    ```
+
+    This is not entirely bad, as I learned how I can filter stuff when dealing with mdx. Let's pretend I want to hide a blog post from the list, I can add a field in the markdown and filter based on that.
+
+1.  **Theming, dark mode and light mode?**
+
+    Soon to be discovered! :)
+
 ## 🚀 Sparse notes
 
 I don't have any at the moment :) Thank you for stopping by

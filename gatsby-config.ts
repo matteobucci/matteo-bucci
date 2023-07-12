@@ -5,31 +5,46 @@ const config: GatsbyConfig = {
     title: `Matteo Bucci`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    /** Basic plugins */
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-sharp",
+    /** This should make available files like custom css and more */
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/`,
+      },
+    },
+    /** Plugins to make the content available to graphql */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/blog/`,
+        path: `${__dirname}/content/blog/`,
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'assets',
-        path: `${__dirname}/static/`,
+        name: `projects`,
+        path: `${__dirname}/content/projects/`,
       },
     },
-
   ],
-}
+};
+
+
+
+
+
+
+
+
+
 
 export default config

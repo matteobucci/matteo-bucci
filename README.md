@@ -301,6 +301,16 @@ I must admit though, writing it down helped me visualize how silly I am during t
 
 This made my day :)
 
+**On setting up the projects page**
+
+I've created a project page with mdx files.
+
+The idea is that I can showcase the project I'll be working on and, if I want, I can write some story about the project itself.
+I realized how little I shared so far of what I've been doing.  
+
+I am also getting more confortable with GraphQL queries within Gatsby. I would like to see how well it behaves on more complex use cases.
+
+
 
 
     TODO NEXT:
@@ -308,6 +318,7 @@ This made my day :)
     - Add new content and a nice navigation
     - Fix first margin on navigation
     - Refactor a footer adding a linkedin link 
+    - 
 
 
 

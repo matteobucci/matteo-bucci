@@ -22,7 +22,7 @@ What I would like to see on my website
 
 I need to set my expectations correctly. Whenever I'm too ambitious, I always end up spending more time on configuration than the actual project. Actually, the main factor on the success of something I'm working on are not my ambitions but the time I put in.
 
-## 🚀 The beginnings
+## Day 1 🚀 The beginnings
 
 1.  **Initialization of the project**
 
@@ -183,7 +183,7 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
   
 
 
-## 🚀 Further explorations
+## Day 2 🔭 Further explorations
 
 1.  **Having multiples, separate blogs?**
 
@@ -278,6 +278,29 @@ I need to set my expectations correctly. Whenever I'm too ambitious, I always en
     How I found out this? Thanks to my inspiration for this project, the website of [https://taniarascia.com](taniarascia.com)
 
     
+
+## DAY 3 🚧  Simple issues, big headaches
+
+Every time I commit, a new build is performed and my website is updated. This is cool, of course. But you know the uncanney valley effect? In my extended interpretation, a small issue on an almost perfect website RUIN COMPLETELY THE EXPERIENCE. And in my case, this issue was the fact that the CSS was applied 100ms after the page was loaded. I guess this is a problem for everyone suffering from epilessy, but it is a huge problem for me as well.
+
+'About the impostore syndrome'
+Usually I tend to overthink the amount of obstacles I encounter everytime I fight a new issue. Whenever I working with a technology I'm confortable about, I'm a rocket. In no time I can find a solution to most of the issue or I can tell you whether a solution exists or not. 
+When dealing with a new technology, I often look amazed to other people's results. 
+
+When developing this website, I've had a couple of inspirations I looked at. Calling some of them inspiration is reductive, since I've "adopted" a lot of the solution these people are using and adapted their code as well.
+
+As I mentioned before you can see a lot of similarities with [https://taniarascia.com](taniarascia.com). 
+
+Why I'm talking about impostore syndrome? 
+Because it took me zero seconds to identify what the problem was about, I've used the right tools to assess the issue (lighthouse), I've used the right script to reproduce the issue not only on the remote deployment but on a local deployment as well. 
+I identified the solution quite quickly, implemented it even quickier. By the way, the solution is the usual underdocumented file that Tania used as well on her website. 
+Still, the feeling I got when dealing with this was not great. I felt I was blocked trying to solve something that I should alrady have known instead of learning something actually usefull. It didn't matter the speed I fixed this issue (it would have took me days some years ago) or the fact that the documentation for this specific matter was rather poor.
+I must admit though, writing it down helped me visualize how silly I am during these moments. There is another thing it helped a lot:
+
+![Tania commit history](./src/images/tania-commit-history.png)
+
+This made my day :)
+
 
 
     TODO NEXT:

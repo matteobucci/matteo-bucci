@@ -1605,3 +1605,10 @@ p.text-medium {
   background: var(--scrollbar-color);
   border-radius: 2px;
 }
+
+
+/* Statistic page */
+
+.stats-icon {
+  width: 50px;
+}

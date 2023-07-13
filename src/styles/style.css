@@ -1152,7 +1152,6 @@ a.post time {
 }
 
 /* Grid */
-
 .grid {
   display: block;
 }
@@ -1160,6 +1159,7 @@ a.post time {
 @media screen and (min-width: 1060px) {
   .grid {
     display: grid;
+    /* Two columns here. One is auto, the other is taking 300px */
     grid-template-columns: auto 300px;
     gap: 6rem;
   }

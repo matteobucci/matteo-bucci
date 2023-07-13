@@ -1,11 +1,9 @@
-// Step 1: Import React
-import * as React from 'react'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import * as React from 'react';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
-// Step 2: Define your component
 const ProjectsPage = ({data}) => {
 
   const projects = data.projects.edges;

@@ -310,6 +310,16 @@ I realized how little I shared so far of what I've been doing.
 
 I am also getting more confortable with GraphQL queries within Gatsby. I would like to see how well it behaves on more complex use cases.
 
+## DAY 4 Finding some structure
+
+At this point I think is important to find some structure. I would like to setup some light grid system and understand what options I can make use of.
+
+CSS grid is something I've never really touched before. I've got some experience with flex layouts but I guess it's now time to explore something different.
+
+```grid-template-columns``` is cool, there's nothing I can say. Is quite declarative the way to use it. You just specify how many columns you want by declaring their size in the grid. Anything extra goes on the bottom.
+
+But since I'm not planning into studyng too much of css today, I'll just use it to setup some basic grid inside some pages
+
 
 
 
@@ -318,7 +328,7 @@ I am also getting more confortable with GraphQL queries within Gatsby. I would l
     - Add new content and a nice navigation
     - Fix first margin on navigation
     - Refactor a footer adding a linkedin link 
-    - 
+    - Add a fade in animation when entering some pages
 
 
 

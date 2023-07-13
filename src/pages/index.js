@@ -3,14 +3,17 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { AboutSidebar } from "../components/sidebar";
+import { TypingIntroduction } from "../components/typing-introduction";
 
 const IndexPage = () => {
   return (
     <div class="grid">
       <div>
+        <TypingIntroduction />
+
         <p>Welcome on my little internet space</p>
 
-        <p>Don't be shy.</p>
+        <p>Don't be shy and look around!</p>
 
         <h2>Why?</h2>
         <ul>

@@ -1612,3 +1612,54 @@ p.text-medium {
 .stats-icon {
   width: 50px;
 }
+
+
+
+/* About */
+
+
+/* Style the image */
+
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+/* Style the tech-item */
+.tech-item {
+  border: 1px solid var(--border-color);
+  background: var(--card-background-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: start;
+  padding: 20px;
+}
+
+/* Style the image */
+.tech-item img {
+  width: 80px;
+  /* Adjust the size as needed */
+  height: 80px;
+  /* Adjust the size as needed */
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+/* Style the content container */
+.tech-item__content {
+  flex: 1;
+}
+
+/* Style the title */
+.tech-item__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Style the description */
+.tech-item__description {
+  font-size: 14px;
+  margin-bottom: 0px;
+}

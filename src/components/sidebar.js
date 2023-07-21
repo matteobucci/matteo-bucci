@@ -1,5 +1,4 @@
 import React from "react";
-import me from "../images/matteo-2021.jpg";
 import { StaticImage } from "gatsby-plugin-image";
 
 export const AboutSidebar = () => {
@@ -9,7 +8,7 @@ export const AboutSidebar = () => {
         <h2>Me</h2>
         <StaticImage
           alt="Matteo Bucci"
-          src={me}
+          src="../assets/matteo-2021.jpg"
         />
       </div>
     </aside>

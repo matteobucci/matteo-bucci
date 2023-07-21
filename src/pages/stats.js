@@ -2,9 +2,9 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import skiingGif from '../images/skiing.gif'
-import runningGif from '../images/running.gif'
-import motorbikeGif from '../images/motorbiking.gif'
+import skiingGif from '../assets/skiing.gif'
+import runningGif from "../assets/running.gif";
+import motorbikeGif from "../assets/motorbiking.gif";
 
 const Statistics = () => {
   return (

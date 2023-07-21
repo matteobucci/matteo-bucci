@@ -7,7 +7,7 @@ import { TypingIntroduction } from "../components/typing-introduction";
 
 const IndexPage = () => {
   return (
-    <div class="grid">
+    <div className="grid">
       <div>
         <TypingIntroduction />
 
@@ -60,7 +60,7 @@ const IndexPage = () => {
 
         <StaticImage
           alt="Myself, Matteo Bucci when I was around 8"
-          src="../images/matteo-2003.jpg"
+          src="../assets/matteo-2003.jpg"
         />
       </div>
       <AboutSidebar />

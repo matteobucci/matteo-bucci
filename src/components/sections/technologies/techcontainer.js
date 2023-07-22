@@ -4,7 +4,9 @@ const TechContainer = ({ techs }) => {
   return (
     <div className="tech-container">
       {techs.map((tech) => (
-        <div className="tech-item" key={tech.name}>
+        <div
+          className={`tech-item ${!tech.description ? "small" : ""}`} key={tech.name}
+        >
           <img src={tech.icon} alt={tech.name} />
           <div className="tech-item__content">
             <p className="tech-item__title">{tech.name}</p>
@@ -15,5 +17,6 @@ const TechContainer = ({ techs }) => {
     </div>
   );
 };
+
 
 export default TechContainer;

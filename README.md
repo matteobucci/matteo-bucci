@@ -321,14 +321,20 @@ CSS grid is something I've never really touched before. I've got some experience
 But since I'm not planning into studyng too much of css today, I'll just use it to setup some basic grid inside some pages
 
 
+## DAY 5 Adding content
+
+Most of my day has been spent adding logos of technologies I've used and doing some self discovery about my past.
+It's not easy to remember at first, but giving it several slots of your time and writing everything you remember is a great way to unleash new memories.
+
+Also, it's another moment on which I tend to compare myself with the people that inspires me. That is very good for motivation, but sometimes you feel like you are not doing enough for your career. Needless to say that IT IS NOT WORKING LIKE THAT. It is called availability bias. I tend to value myself compared to what I've just seen, ignoring a vast bunch of experiences most of the people probably never had in their life.
 
 
     TODO NEXT:
     - Investigate on how styling works
-    - Add new content and a nice navigation
     - Fix first margin on navigation
     - Refactor a footer adding a linkedin link 
     - Add a fade in animation when entering some pages
+    - 
 
 
 

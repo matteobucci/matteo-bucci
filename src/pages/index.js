@@ -51,6 +51,9 @@ const IndexPage = () => {
             I wanted to improve my English skills. If a message is meant to be
             pubblic, I think twice before publishing it.
           </li>
+          <li>
+            I wanted to optimize the SEO aroud my name. I'm curious to see the results of this experiment.
+          </li>
           <li>And so, here I am.</li>
         </ul>
 

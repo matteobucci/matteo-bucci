@@ -4,8 +4,11 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { AboutSidebar } from "../components/sidebar";
 import { TypingIntroduction } from "../components/typing-introduction";
+import { Link, graphql } from "gatsby";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data);
+
   return (
     <div className="grid">
       <div>
@@ -52,7 +55,8 @@ const IndexPage = () => {
             pubblic, I think twice before publishing it.
           </li>
           <li>
-            I wanted to optimize the SEO aroud my name. I'm curious to see the results of this experiment.
+            I wanted to optimize the SEO aroud my name. I'm curious to see the
+            results of this experiment.
           </li>
           <li>And so, here I am.</li>
         </ul>
@@ -66,7 +70,24 @@ const IndexPage = () => {
           src="../assets/matteo-2003.jpg"
         />
       </div>
-      <AboutSidebar />
+
+      <div>
+        {data.latest.edges.map((item) => {
+          const node = item.node;
+          return (
+            <article key={node.id}>
+              <h2>
+                <Link to={`/blog/${node.frontmatter.slug}`}>
+                  {node.frontmatter.title}
+                </Link>
+              </h2>
+              <p>Posted: {node.frontmatter.date}</p>
+              <p>{node.excerpt}</p>
+            </article>
+          );
+        })}
+        <AboutSidebar />
+      </div>
     </div>
   );
 };
@@ -74,5 +95,26 @@ const IndexPage = () => {
 IndexPage.Layout = Layout;
 
 export const Head = () => <Seo title="Home Page" />;
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    latest: allMdx(
+      limit: 6
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { template: { eq: "post" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

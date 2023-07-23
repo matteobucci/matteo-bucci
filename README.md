@@ -329,12 +329,41 @@ It's not easy to remember at first, but giving it several slots of your time and
 Also, it's another moment on which I tend to compare myself with the people that inspires me. That is very good for motivation, but sometimes you feel like you are not doing enough for your career. Needless to say that IT IS NOT WORKING LIKE THAT. It is called availability bias. I tend to value myself compared to what I've just seen, ignoring a vast bunch of experiences most of the people probably never had in their life.
 
 
+## DAY 6 Deep dive in Gatsby concepts
+
+Do you know that you can have a graphql query per page and as long as you export it, it doesn't really matter the name of the variable?
+
+It's written [here!](https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/)
+
+Do you know that you can create pages programmatically by extending the function ```createPages```?
+
+```
+actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/blog-post.js`),
+      context: { slug: slug },
+    })
+```
+
+This also helps to clarify how certain plugings must work under the hood.
+
+The context is a very important part of generating dynamic pages based on markdown, for instance.
+
+Also graphql is not really needed.
+
+
+
+
+
     TODO NEXT:
     - Investigate on how styling works
     - Fix first margin on navigation
     - Refactor a footer adding a linkedin link 
     - Add a fade in animation when entering some pages
     - 
+
+Eventual reading list:
+[Introduction of react hooks](https://legacy.reactjs.org/docs/hooks-intro.html)
 
 
 

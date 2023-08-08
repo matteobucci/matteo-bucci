@@ -352,6 +352,47 @@ The context is a very important part of generating dynamic pages based on markdo
 Also graphql is not really needed.
 
 
+## DAY 7 Kubernetes and Docker?
+
+It's strange, but I wanted to include some stats about my garmin on my personal website. It's not an easy task: a solution would be to update manually the sum. On the opposite side of the spectrum, there's running kubernetes cluster to make this operations for you.
+
+The steps are the following:
+- Run and setup GarminDb using my local machine
+- Create a script to update the database and a script to retrieve the data I need in JSON format
+- Create a docker image that runs the script and expose the JSON file
+- Create a kubernetes cluster. The Kubernetes provides a permanent storage for the database of GarminDb. I simply coulnd't load 200MB every day I run the script, and I needed historical data to make this process fast (~2 min instead of 60 min)
+- Create a cronjob that runs the script every day
+- Integrate with GH to periodically make pull request to the website
+
+That's it! But since we are here, why don't look at deployment operations for this Gabsty image?
+
+
+There is the official (Docker Image)[https://github.com/gatsbyjs/gatsby-docker] that should make things really easy! Let's try it!
+
+Obviusly is not working with the stranges error ever
+
+```
+--------------------
+   1 | >>> FROM gatsbyjs/gatsby:onbuild as build
+   2 |     
+   3 |     FROM gatsbyjs/gatsby
+--------------------
+ERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref W2IA:VLAN:N3TJ:LZA3:UFSW:5DYT:XAW6:KNWW:WJLV:GPOQ:IBSF:ZWSG::idwbn00rwkquzq1e9fr5v4l09: "/public": not found
+
+```
+
+Not sure what this is about, when I tried to create a Dockerfile on my own I noticed that the node version used by the official one is 12.
+The current Gatsby version is happy when node is > 18. 
+
+So, I've created a Dockerfile on my own, and it's working! I've also added a multi-stage build to make the image as small as possible.
+
+
+```docker run -p 80:80 matteobucci:latest``` and my localhost have never been happier! The container works like a charm.
+
+Now, is it Kubernetes the best way to deploy my website? If it weren't for the price, why not? 
+
+But pricing wise, I would like to spend as little money as possible. Since I don't need any permanent storage, I could deploy this on cloud run, why not?
+
 
 
 

@@ -60,6 +60,10 @@ const IndexPage = ({ data }) => {
           </li>
           <li>And so, here I am.</li>
         </ul>
+      
+        <h1>Better professionals</h1>
+        <a  href="https://xyproblem.info/">XY problem</a>
+        
 
         <h2>Still on this page?</h2>
 

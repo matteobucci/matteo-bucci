@@ -394,6 +394,20 @@ Now, is it Kubernetes the best way to deploy my website? If it weren't for the p
 But pricing wise, I would like to spend as little money as possible. Since I don't need any permanent storage, I could deploy this on cloud run, why not?
 
 
+## Delusion and disappointment
+
+Today I was inspired. I had in my what I needed to implement. The test of the day before worked fine, so it was just a matter of wiring the pieces.
+
+After a couple of hour of adjusting, of course, the authentication of Garmin decides to require 2FA codes just to have fun. It is something it happened before, but I was hoping it was a temporary issue. 
+
+What to do? So far the cron job seems to work, so hopefully this is not going to be a recurring issue.
+
+In the meanwhile, I'll just polish some content OR I can investigate about Kubernetes secrets!
+
+Secrets are cool, but nothing amazing to be honest, it looks time consuming to setup. Let's see how many of them I'll need it.
+
+
+
 
 
     TODO NEXT:

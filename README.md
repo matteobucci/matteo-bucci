@@ -407,6 +407,14 @@ In the meanwhile, I'll just polish some content OR I can investigate about Kuber
 Secrets are cool, but nothing amazing to be honest, it looks time consuming to setup. Let's see how many of them I'll need it.
 
 
+## Adding code highlight
+
+The cool solution looks like it's not supporting Gatsby 5.
+Most of the solutions, instead of using gatsby-mdx-plugin are using gastby-remark-prismjs.
+The solution I have found [Thanks to this guide](https://dev.to/mmz001/adding-syntax-highlighting-with-line-numbers-to-gatsby-mdx-using-prism-react-renderer-1bgk) is not compatible with my current code so I needed to adapt it.
+The code was different.
+The import as well. Welcome to the JS ecosystem.
+
 
 
 

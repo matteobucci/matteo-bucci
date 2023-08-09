@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
       
         <h1>Better professionals</h1>
         <a  href="https://xyproblem.info/">XY problem</a>
-        
+        <a href="https://www.youtube.com/watch?v=6xsvGYIxJok">The art of asking</a>
 
         <h2>Still on this page?</h2>
 

@@ -10,7 +10,12 @@ const config: GatsbyConfig = {
     /** Basic plugins */
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"]
+      },
+    },
     "gatsby-transformer-sharp",
     /** This should make available files like custom css and more */
     {

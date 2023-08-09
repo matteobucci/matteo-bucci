@@ -1667,3 +1667,15 @@ p.text-medium {
   font-size: 14px;
   margin-bottom: 0px;
 }
+
+/* Code formatting */
+.line-number-style {
+  text-align: right;
+  padding-right: 1em;
+  user-select: none;
+  opacity: 0.5;
+}
+
+.prism-code {
+  padding: 2em;
+}

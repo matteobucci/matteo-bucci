@@ -8,8 +8,7 @@ const mainNavItems = [
   { url: '/', label: 'Home', mobileOnly: true }, // I show this only on mobile instead of the main title
   { url: '/about', label: 'About' },
   { url: '/blog',label: 'Blog' },
-  { url: '/projects', label: 'Projects' },
-  { url: '/stats', label: 'Statistics' },
+  { url: '/projects', label: 'Projects' }
 ]
 
 const socialNavItems = [

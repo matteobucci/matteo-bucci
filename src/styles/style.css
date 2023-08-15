@@ -79,7 +79,7 @@
   --card-background-color: var(--gray-0);
   --button-background-color: var(--gray-05);
   --marker: var(--indigo);
-  --link: var(--indigo);
+  --link: var(--green);
   --link-hover-color: var(--indigo-muted);
   --navbar: var(--gray-1);
   --navbar-border: var(--gray-2);
@@ -1609,14 +1609,49 @@ p.text-medium {
 
 /* Statistic page */
 
-.stats-icon {
+.stat-title-container {
+  display: flex;
+  /* Gap */
+  gap: 0.5rem;
+}
+
+.stat-metric-container {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-icon {
   width: 50px;
 }
 
+.stats-card {
+  border: 1px solid var(--border-color);
+  background: var(--card-background-color);
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  color: var(--font-color-base);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-title {
+  font-size: 1.5em;
+}
+
+.stat-value {
+  font-size: 1.3em;
+  font-weight: 600;
+}
 
 
 /* About */
-
 
 /* Style the image */
 
@@ -1678,4 +1713,21 @@ p.text-medium {
 
 .prism-code {
   padding: 2em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+
+
+
+.home-divisor {
+  height: 150px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-style: italic;
+  margin-top: -15px;
 }

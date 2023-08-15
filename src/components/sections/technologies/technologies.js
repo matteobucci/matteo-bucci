@@ -175,7 +175,7 @@ const Technologies = () => {
       <TechContainer techs={techILike} />
 
       <h3>Things I have some experience with</h3>
-      <p className={subtitle}>Or that are not really important to mention, given the ones above</p>
+      <p className={subtitle}>Or less relevant</p>
       <TechContainer techs={techIHaveExperienceWith} />
     </div>
   );

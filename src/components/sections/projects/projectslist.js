@@ -34,7 +34,7 @@ const ProjectsList = () => {
 
           return (
             <div className="muted card flex" key={`project-${slug}`}>
-              {image && <StaticImage src={image} />}
+              {/* {image && <StaticImage src={image} />} */}
               <p>
                 <time>{period}</time>
                 {title}

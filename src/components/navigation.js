@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { ExternalLinkIcon } from '../assets/ExternalLinkIcon'
-import moon from '../assets/moon.png'
+import dark from '../assets/dark.svg'
+import light from '../assets/light.svg'
 
 const mainNavItems = [
   { url: '/', label: 'Home', mobileOnly: true }, // I show this only on mobile instead of the main title
@@ -16,6 +17,9 @@ const socialNavItems = [
 ]
 
 export const Navigation = ({ theme, onUpdateTheme }) => {
+
+  const usedIcon = theme === 'dark' ? dark : light
+
   return (
     <section className="navigation">
       <div className="container">
@@ -57,7 +61,7 @@ export const Navigation = ({ theme, onUpdateTheme }) => {
         </div>
         <div className="theme-toggle">
           <button onClick={onUpdateTheme}>
-            <img src={moon} alt="Theme" />
+            <img src={usedIcon} alt="Theme" />
           </button>
         </div>
       </div>

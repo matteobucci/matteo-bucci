@@ -428,6 +428,15 @@ The import as well. Welcome to the JS ecosystem.
 Eventual reading list:
 [Introduction of react hooks](https://legacy.reactjs.org/docs/hooks-intro.html)
 
+## Adding comments capabilities
+
+Main repo is (this one)[https://utteranc.es/]
+
+Website itself is just a simple configuration manager that prints out the script to install on React.
+
+
+
+
 
 
 ## 🚀 Sparse notes

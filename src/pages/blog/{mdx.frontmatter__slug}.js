@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CodeBlock from '../../components/codeblock'
 import { MDXProvider } from "@mdx-js/react";
+import { Comments } from "../../components/comments";
 
 const components = {
   pre: CodeBlock
@@ -19,6 +20,7 @@ const BlogPost = ({ data, children }) => {
       <p>{data.mdx.frontmatter.date}</p>
       <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
       <MDXProvider components={components}>{children}</MDXProvider>
+      <Comments />
     </Layout>
   );
 };

@@ -1625,6 +1625,7 @@ p.text-medium {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
 /* Style the tech-item */
 .tech-item {
   border: 1px solid var(--border-color);
@@ -1678,4 +1679,59 @@ p.text-medium {
 
 .prism-code {
   padding: 2em;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+
+/* Style the tech-item */
+.project-item {
+  border: 1px solid var(--border-color);
+  background: var(--card-background-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: start;
+  padding: 20px;
+}
+
+
+/* Style the image */
+.project-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.project-item.small img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Style the content container */
+.project-item__content {
+  flex: 1;
+}
+
+/* Style the title */
+.project-item__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Style the description */
+.project-item__description {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.project-item__link {
+  text-align: end;
+  margin: 0px;
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Layout from '../components/layout';
-import ProjectsList from '../components/sections/projects/projectslist';
-import Seo from '../components/seo';
+import Layout from '../../components/layout';
+import ProjectsList from '../../components/sections/projects/projectslist';
+import Seo from '../../components/seo';
 
 const ProjectsPage = ({data}) => {
 

@@ -7,6 +7,7 @@ const ProjectsList = () => {
     query ProjectsQuery {
       projects: allMdx(
         filter: { frontmatter: { template: { eq: "project" } } }
+        sort: {frontmatter: {period: DESC}}
       ) {
         edges {
           node {
@@ -16,7 +17,10 @@ const ProjectsList = () => {
               date(formatString: "MMMM DD, YYYY")
               name
               period
+              slug
               description
+              tags
+              repository
               image {
                 childImageSharp {
                   gatsbyImageData

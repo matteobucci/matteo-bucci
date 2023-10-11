@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
   return (
     <div className="grid">
       <div>
-        ifjgsogdfioghofdsohgosof
+      <TypingIntroduction />
    
 
         <p>Welcome on my little internet space</p>

@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cbf709f-ae99-4abd-ac9c-b607dfaca0d7/deploy-status)](https://app.netlify.com/sites/matteobucci/deploys)
+
 <h1 align="center">
   This is Matteo learning Gatsby
 </h1>

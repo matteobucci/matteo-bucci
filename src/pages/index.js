@@ -12,13 +12,12 @@ const IndexPage = ({ data }) => {
   return (
     <div className="grid">
       <div>
-        <TypingIntroduction />
+        ifjgsogdfioghofdsohgosof
+   
 
         <p>Welcome on my little internet space</p>
 
-        <p>Don't be shy and look around!</p>
-
-        <h2>Why?</h2>
+        <h2>Why this?</h2>
         <ul>
           <li>I love to build things.</li>
           <li>
@@ -60,14 +59,12 @@ const IndexPage = ({ data }) => {
           </li>
           <li>And so, here I am.</li>
         </ul>
-      
-        <h1>Better professionals</h1>
-        <a  href="https://xyproblem.info/">XY problem</a>
-        <a href="https://www.youtube.com/watch?v=6xsvGYIxJok">The art of asking</a>
 
         <h2>Still on this page?</h2>
 
         <p>There's nothing more to see here! Look somewhere else :)</p>
+
+        <Link></Link>
 
         <StaticImage
           alt="Myself, Matteo Bucci when I was around 8"

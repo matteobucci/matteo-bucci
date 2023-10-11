@@ -22,3 +22,81 @@ So I think that I need to set me specific goals in two areas:
 
 Would I reach my goal? I don't know, but in the meanwhile I've prepared this short paragraph to motivate me!
 
+
+## October 2023
+
+I'm writing this paragraph from my iPad PRO during a train trip. I know I could have used my pc, but for a short day-trip I didn't wanted to increase the weight to carry by more than two kilos.
+
+I don't like small screens but I believe I've reached a flexibility similar to what I needed on this project.
+
+Things I'm capable to do:
+- Open an URL and start coding, indipendently from my device
+- Editing and creating new files and component
+- Run the project and compile files
+- Test the result on a dedicated endpoint
+- Commit, and see the changes reflected in real life
+- Using many extensions I normally use, including copilot
+
+Things I struggle doing
+- Include pictures and other type of resources in the project. This is more a limitation of iOS more than anything else
+- Writing whenever the connection is unstable
+
+Things I still can't do
+- Having a fullscreen editor (I need to deal with the address bar of the browser)
+- Working on more complex project (ATM)
+
+## How to do it?
+My current setup is based on three main components:
+
+*VS Code Web*
+I coudln't belive the first time I saw it. It's an equivalent version to the desktop one. The limitations, of course, are coming from the fact that the app has no access to any file system.
+
+*Github Codespaces*
+This allow to have a virtual machine somewhere in the cloud running an instance of VSCode server, with your repository already loaded on it.
+With such service, VSCode dev could easily connect to terminal of a Codespace instance and, any command or file changed is changed remotelly.
+
+This is achievable also by installing a server instance on a VM and connect to that. I would like to try eventually but this setup is by far the fastest achievable.
+
+Whenever we need to access something that is running on the development server (on localhost), thanks to port forwarding we can access a tunnel on a public URL that act exactly how localhost would do locally.
+
+*Web containers*
+Another VSCode feature, uses a file definition to build your dev enviroment from a docker container.
+Let's say that I'm working on two different projects with very different enviroments. One is a NodeJS project and the other one is a Python one.
+
+I could associate to one project a container built for python development and to the other one a container build for node development.
+
+Furthermore, we could associate as well info about the extensions that are required, preliminary commands or dependencies to install and more.
+
+This allow a real one-click experience for any dev that wants to get up and running on a project.
+
+By using the webcontainer associated with this project, for instance, there is not even the need to run 'npm install' because it's done automatically when starting the container.
+
+Codespaces supports webcontainer as well.
+
+This is an example of my current devcontainer
+
+```
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install -g gatsby && npm install"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
+
+```

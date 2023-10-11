@@ -1734,4 +1734,57 @@ p.text-medium {
 .project-item__link {
   text-align: end;
   margin: 0px;
+
+}
+  
+/* Project item generated code*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-image{
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: #e0e0e0
+}
+
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.project-date {
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 5px;
 }

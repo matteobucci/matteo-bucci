@@ -18,9 +18,10 @@ const ProjectContainer = ({ projects }) => {
 
         return (
             <div
-              className={`project-item ${!project.description ? "small" : ""}`} key={project.id}
+              className={`project-item`} key={project.id}
             >
-                <GatsbyImage image={image} alt={project.name || "No description provided"} />
+              {image && <GatsbyImage className="project-image" image={image} alt={project.name || "No description provided"} />}
+              {!image && <div className="project-image-placeholder"></div>}  
                   <div className="project-item__content">
                     <p className="project-item__title">{project.name}</p>
                     <p className="project-item__description">{project.description}</p>

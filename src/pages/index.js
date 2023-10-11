@@ -14,95 +14,84 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-    <div className="grid">
-      <div>
-      <TypingIntroduction />
-   
+      <div className="grid">
+        <div>
+          <TypingIntroduction />
 
-        <p>Welcome on my little internet space</p>
 
-         <img className='home-divisor' alt='' src={sea} />
+          <p>Welcome on my little internet space</p>
 
-        <p>On <Link to="/about">this other page</Link> I introduce myself properly</p>
+          <img className='home-divisor' alt='' src={sea} />
 
-        <h2>Why this?</h2>
-        <ul>
-          <li>It was fun to build</li>
-          <li>
-            I like to start something that looks simple but get more interesting the more time you spend with.
-          </li>
-          <li>
-            I wanted to consolidate some technologies I was exploring.
-          </li>
-          <li>I needed a place to host my thoughts.</li>
-          <li>
-            If I start sharing my learning here, I will be motivated to learn and I will compare my progress with the past.
-          </li>
-          <li>
-            Not every experiments needs to be made on my company production database. (It's a joke, I don't do that)
-          </li>
-          <li>
-            It's a funny way to keep track of my profile.
-          </li>
-          <li>
-            I wanted to start a project with very little overhead. I just want to add content and 
-            it just needs to work. If I forget in 2 years, it should still work the same.
-          </li>
-          <li>
-            I wanted to improve my English skills. If a message is meant to be
-            pubblic, I think twice before publishing it.
-          </li>
-          <li>
-            If you look for Matteo Bucci on Google, it MUST be me. Jokes apart, I would to apply some SEO as well.
-          </li>
-          <li>And so, here I am.</li>
-        </ul>
+          <p>On <Link to="/about">this other page</Link> I introduce myself properly</p>
 
-        <h2>Still on this page?</h2>
+          <h2>Why this?</h2>
+          <ul>
+            <li>It was fun to build</li>
+            <li>
+              I like to start something that looks simple but get more interesting the more time you spend with.
+            </li>
+            <li>
+              I wanted to consolidate some technologies I was exploring.
+            </li>
+            <li>I needed a place to host my thoughts.</li>
+            <li>
+              If I start sharing my learning here, I will be motivated to learn and I will compare my progress with the past.
+            </li>
+            <li>
+              Not every experiments needs to be made on my company production database. (It's a joke, I don't do that)
+            </li>
+            <li>
+              It's a funny way to keep track of my profile.
+            </li>
+            <li>
+              I wanted to start a project with very little overhead. I just want to add content and
+              it just needs to work. If I forget in 2 years, it should still work the same.
+            </li>
+            <li>
+              I wanted to improve my English skills. If a message is meant to be
+              pubblic, I think twice before publishing it.
+            </li>
+            <li>
+              If you look for Matteo Bucci on Google, it MUST be me. Jokes apart, I would to apply some SEO as well.
+            </li>
+            <li>And so, here I am.</li>
+          </ul>
 
-        <p>There's nothing more to see here! Look somewhere else :)</p>
+          {/* <h2>Still on this page?</h2>
 
-        <Link></Link>
+          <p>There's nothing more to see here! Look somewhere else :)</p>
 
-        <StaticImage
-          alt="Myself, Matteo Bucci when I was around 8"
-          src="../assets/matteo-2003.jpg"
-        />
+
+          <StaticImage
+            alt="Myself, Matteo Bucci when I was around 8"
+            src="../assets/matteo-2003.jpg"
+          /> */}
+        </div>
+
+        <div>
+          <h2>Latest posts</h2>
+          {data.latest.edges.map((item) => {
+            const node = item.node;
+            return (
+              <article key={node.id}>
+                <h2>
+                  <Link to={`/blog/${node.frontmatter.slug}`}>
+                    {node.frontmatter.title}
+                  </Link>
+                </h2>
+                <p>Posted: {node.frontmatter.date}</p>
+                <p>{node.excerpt}</p>
+              </article>
+            );
+          })}
+        </div>
       </div>
-
       <div>
-        {data.latest.edges.map((item) => {
-          const node = item.node;
-          return (
-            <article key={node.id}>
-              <h2>
-                <Link to={`/blog/${node.frontmatter.slug}`}>
-                  {node.frontmatter.title}
-                </Link>
-              </h2>
-              <p>Posted: {node.frontmatter.date}</p>
-              <p>{node.excerpt}</p>
-            </article>
-          );
-        })}
-      </div>
-    </div>
-    <div>
-      <h2>Statistics</h2>
-
-      <p className="subtitle">Coming from my Garmin</p>
-
+        <h2>Statistics</h2>
+        <p className="subtitle">Coming from my Garmin</p>
         <Statistics />
-
-        <h2>Still on this page?</h2>
-
-        <p>There's nothing more to see here! Look somewhere else :)</p>
-
-        <StaticImage
-          alt="Myself, Matteo Bucci when I was around 8"
-          src="../assets/matteo-2003.jpg"
-        />
-    </div>
+      </div>
     </div>
   );
 };

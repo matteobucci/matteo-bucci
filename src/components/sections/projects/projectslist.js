@@ -1,22 +1,31 @@
+import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import ProjectContainer from "./projectcontainer";
 
 const ProjectsList = () => {
   const data = useStaticQuery(graphql`
     query ProjectsQuery {
       projects: allMdx(
         filter: { frontmatter: { template: { eq: "project" } } }
+        sort: {frontmatter: {period: DESC}}
       ) {
         edges {
           node {
             id
+            body
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
-              title
+              name
               period
+              slug
               description
-              image
+              tags
+              repository
+              image {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
             }
           }
         }
@@ -24,25 +33,18 @@ const ProjectsList = () => {
     }
   `);
 
+  const projectList = data.projects.edges.map(it => ({
+    id: it.node.id,
+    body: it.node.body,
+    ...it.node.frontmatter,
+  }));
+  
   return (
     <div>
       <h1>Projects</h1>
       <div>
-        {data.projects.edges.map(({ node }) => {
-          const { frontmatter } = node;
-          const { title, period, description, image, slug } = frontmatter;
 
-          return (
-            <div className="muted card flex" key={`project-${slug}`}>
-              {/* {image && <StaticImage src={image} />} */}
-              <p>
-                <time>{period}</time>
-                {title}
-              </p>
-              <p>{description}</p>
-            </div>
-          );
-        })}
+         <ProjectContainer projects={projectList}></ProjectContainer>
       </div>
     </div>
   );

@@ -1660,6 +1660,7 @@ p.text-medium {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
 /* Style the tech-item */
 .tech-item {
   border: 1px solid var(--border-color);
@@ -1730,4 +1731,125 @@ p.text-medium {
   margin-bottom: 1rem;
   font-style: italic;
   margin-top: -15px;
+}
+
+/* Style the tech-item */
+.project-item {
+  border: 1px solid var(--border-color);
+  background: var(--card-background-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: start;
+  padding: 20px;
+  position: relative;
+
+}
+
+
+/* Style the image */
+
+/* Style the content container */
+.project-item__content {
+  flex: 1;
+}
+
+/* Style the title */
+.project-item__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Style the description */
+.project-item__description {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.project-item__link {
+  text-align: end;
+  margin: 0px;
+
+}
+  
+/* Project item generated code*/
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-image{
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  object-position: 50% 50%;
+  margin-bottom: 10px;
+}
+
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.project-date {
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 5px;
+}
+
+.project-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  color: #333;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.project-item__period {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.project-item__title_container {
+  display: flex;
+}
+
+.project-item__gh_icon {
+  margin-left: 10px;
 }

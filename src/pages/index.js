@@ -16,11 +16,12 @@ const IndexPage = ({ data }) => {
     <div>
     <div className="grid">
       <div>
-        <TypingIntroduction />
+      <TypingIntroduction />
+   
 
         <p>Welcome on my little internet space</p>
 
-        <img className='home-divisor' alt='' src={sea} />
+         <img className='home-divisor' alt='' src={sea} />
 
         <p>On <Link to="/about">this other page</Link> I introduce myself properly</p>
 
@@ -56,8 +57,17 @@ const IndexPage = ({ data }) => {
           </li>
           <li>And so, here I am.</li>
         </ul>
-      
-  
+
+        <h2>Still on this page?</h2>
+
+        <p>There's nothing more to see here! Look somewhere else :)</p>
+
+        <Link></Link>
+
+        <StaticImage
+          alt="Myself, Matteo Bucci when I was around 8"
+          src="../assets/matteo-2003.jpg"
+        />
       </div>
 
       <div>

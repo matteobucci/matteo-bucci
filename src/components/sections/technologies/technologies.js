@@ -3,7 +3,6 @@ import TechContainer from "./techcontainer";
 
 import { subtitle } from "./technologies.module.css";
 
-
 import react from "../../../assets/icons/react.svg";
 import angular from "../../../assets/icons/angular.svg";
 import expressjs from "../../../assets/icons/express.svg";
@@ -160,9 +159,6 @@ const techIHaveExperienceWith = [
   },
 ];
 
-
-
-// Step 2: Define your component
 const Technologies = () => {
   return (
     <div className="technologies">

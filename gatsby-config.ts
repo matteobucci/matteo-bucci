@@ -52,7 +52,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://https://matteobucci.netlify.app/', // replace with your domain
-        sitemap: 'https://https://matteobucci.netlify.app/sitemap.xml', // replace with your domain
+        sitemap: 'https://matteobucci.netlify.app/sitemap-index.xml', // replace with your domain
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

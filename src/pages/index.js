@@ -1,15 +1,17 @@
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Statistics from "../components/stats";
 import { TypingIntroduction } from "../components/typing-introduction";
 
-import sea from '../assets/sea.gif'
-
+import sea from '../assets/sea.gif';
 
 const IndexPage = ({ data }) => {
+
+  const [isWhyOpen, setIsWhyOpen] = React.useState(false);
+  const [isStatsOpen, setIsStatsOpen] = React.useState(false);
+
   console.log(data);
 
   return (
@@ -19,15 +21,49 @@ const IndexPage = ({ data }) => {
           <TypingIntroduction />
 
 
-          <p>Welcome on my little internet space</p>
+          <p>Welcome to my little internet space</p>
 
           <img className='home-divisor' alt='' src={sea} />
 
-          <p>On <Link to="/about">this other page</Link> I introduce myself properly</p>
+          <p>In <Link to="/about">this page</Link> I introduce myself properly</p>
 
-          <h2>Why this?</h2>
+
+
+          {/* <h2>Still on this page?</h2>
+
+          <p>There's nothing more to see here! Look somewhere else :)</p>
+
+
+          <StaticImage
+            alt="Myself, Matteo Bucci when I was around 8"
+            src="../assets/matteo-2003.jpg"
+          /> */}
+        </div>
+
+        <div>
+          <h2>Latest entries</h2>
+          {data.latest.edges.map((item) => {
+            const node = item.node;
+            return (
+              <article key={node.id}>
+                <h3>
+                  <Link to={`/blog/${node.frontmatter.slug}`}>
+                    {node.frontmatter.title}
+                  </Link>
+                </h3>
+                <p>Posted: {node.frontmatter.date}</p>
+                <p>{node.excerpt}</p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      <h3 className="displaycontenthandle" onClick={() => setIsWhyOpen(!isWhyOpen)}>Why?</h3>
+      {isWhyOpen &&
+        <div className="showContent">
           <ul>
-            <li>It was fun to build</li>
+            <li>It's fun to build</li>
             <li>
               I like to start something that looks simple but get more interesting the more time you spend with.
             </li>
@@ -57,40 +93,19 @@ const IndexPage = ({ data }) => {
             </li>
             <li>And so, here I am.</li>
           </ul>
-
-          {/* <h2>Still on this page?</h2>
-
-          <p>There's nothing more to see here! Look somewhere else :)</p>
-
-
-          <StaticImage
-            alt="Myself, Matteo Bucci when I was around 8"
-            src="../assets/matteo-2003.jpg"
-          /> */}
         </div>
 
-        <div>
-          <h2>Latest posts</h2>
-          {data.latest.edges.map((item) => {
-            const node = item.node;
-            return (
-              <article key={node.id}>
-                <h2>
-                  <Link to={`/blog/${node.frontmatter.slug}`}>
-                    {node.frontmatter.title}
-                  </Link>
-                </h2>
-                <p>Posted: {node.frontmatter.date}</p>
-                <p>{node.excerpt}</p>
-              </article>
-            );
-          })}
-        </div>
-      </div>
+      }
+
       <div>
-        <h2>Statistics</h2>
-        <p className="subtitle">Coming from my Garmin</p>
-        <Statistics />
+        <h3 className="displaycontenthandle" onClick={() => setIsStatsOpen(!isStatsOpen)}>Personal stats</h3>
+        {isStatsOpen &&
+          <div className="showContent">
+            <p className="subtitle">Coming from my Garmin</p>
+            <Statistics />
+          </div>
+        }
+
       </div>
     </div>
   );

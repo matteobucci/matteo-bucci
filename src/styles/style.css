@@ -1853,3 +1853,32 @@ p.text-medium {
 .project-item__gh_icon {
   margin-left: 10px;
 }
+
+/* Homepage tricks */
+.displaycontenthandle {
+  cursor: pointer;
+  /* To indicate it's clickable */
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
+}
+
+.displaycontenthandle:hover {
+  color: #7b8086;
+  /* Change color on hover. You can pick any color. */
+  text-decoration: underline;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.showContent {
+  animation: fadeIn 0.5s forwards;
+}

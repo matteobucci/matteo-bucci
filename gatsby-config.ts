@@ -3,7 +3,8 @@ import type { GatsbyConfig } from "gatsby"
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Matteo Bucci`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://matteobucci.netlify.app`,
+    description: "Matteo Bucci description ciao prova"
   },
   graphqlTypegen: true,
   plugins: [
@@ -39,6 +40,21 @@ const config: GatsbyConfig = {
         name: `projects`,
         path: `${__dirname}/content/projects/`,
       },
+    },
+    'gatsby-plugin-react-helmet',
+   {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+      //  excludes: ['**/blog/**'] Eventually I would like to exclude the projects from the sitemap
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://https://matteobucci.netlify.app/', // replace with your domain
+        sitemap: 'https://https://matteobucci.netlify.app/sitemap.xml', // replace with your domain
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
   ],
 };

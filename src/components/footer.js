@@ -5,14 +5,14 @@ import gatsby from '../assets/gatsby.png'
 import github from '../assets/nav-github.png'
 
 const links = [
-  { url: 'https://the-roommate.com', label: 'RoomMate' },
+  //{ url: 'https://the-roommate.com', label: 'RoomMate' },
   // { url: 'https://ko-fi.com/taniarascia', label: 'Ko-Fi' },
   // { url: 'https://patreon.com/taniarascia', label: 'Patreon' },
-   { url: 'https://www.mbucci.eu/rss.xml', label: 'RSS' },
+ //  { url: 'https://www.mbucci.eu/rss.xml', label: 'RSS' },
 ]
 const madeWithLinks = [
-  { url: 'https://www.gatsbyjs.org/', label: 'Gatsby', icon: gatsby },
-  { url: 'https://github.com/matteobucci', label: 'GitHub', icon: github },
+  // { url: 'https://www.gatsbyjs.org/', label: 'Gatsby', icon: gatsby },
+  { url: 'https://github.com/matteo-bucci', label: 'GitHub', icon: github },
  // { url: 'https://www.netlify.com', label: 'Netlify', icon: netlify },
 ]
 
@@ -21,7 +21,7 @@ export const Footer = () => {
     <footer className="footer">
       <section>
         <nav>
-          <span className="desktop-only">Made by Matteo Bucci</span>
+          <span className="desktop-only">Made by me in 🇱🇺</span>
           {links.map((link) => (
             <a
               href={link.url}

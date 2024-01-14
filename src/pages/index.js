@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
         <h3 className="displaycontenthandle" onClick={() => setIsStatsOpen(!isStatsOpen)}>Personal stats</h3>
         {isStatsOpen &&
           <div className="showContent">
-            <p className="subtitle">Coming from my Garmin</p>
+            <p className="subtitle">Up to the release of my latest blogpost</p>
             <Statistics />
           </div>
         }

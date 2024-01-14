@@ -17,6 +17,7 @@ const BlogPost = ({ data, children }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+      <h1>{data.mdx.frontmatter.title}</h1>
       <p>{data.mdx.frontmatter.date}</p>
       <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
       <MDXProvider components={components}>{children}</MDXProvider>

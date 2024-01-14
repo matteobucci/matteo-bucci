@@ -3,8 +3,8 @@ import type { GatsbyConfig } from "gatsby"
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Matteo Bucci`,
-    siteUrl: `https://matteobucci.netlify.app`,
-    description: "Matteo Bucci description ciao prova"
+    siteUrl: `https://mbucci.eu`,
+    description: "Matteo Bucci's personal website. I am a software engineer living in Luxembourg."
   },
   graphqlTypegen: true,
   plugins: [
@@ -51,8 +51,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://https://matteobucci.netlify.app/', // replace with your domain
-        sitemap: 'https://matteobucci.netlify.app/sitemap-index.xml', // replace with your domain
+        host: 'https://mbucci.eu',
+        sitemap: 'https://mbucci.eu/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

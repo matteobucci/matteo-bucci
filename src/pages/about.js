@@ -1,9 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-
 import Technologies from '../components/sections/technologies/technologies';
-import Experiences from '../components/sections/experiences';
 import { AboutSidebar } from '../components/sidebar';
 
 const calculateAge = (birthdate) => {
@@ -22,7 +20,6 @@ const calculateAge = (birthdate) => {
   return age;
 };
 
-// Step 2: Define your component
 const AboutPage = () => {
 
   const age = calculateAge('08/03/1995');
@@ -33,17 +30,14 @@ const AboutPage = () => {
 
         <div>
           <p>
-            Hi there! I am {age} years old, and I'm passionate about technology since I have
-            memories.
+            Hi there! My name is Matteo Bucci, I am {age} years old and I'm passionate about technology or as long as I can remember.
           </p>
 
-          <p>I've graduated in Bologna in computer engineering</p>
-          <p>In 2017 one personal project became my ticket into the most prestigius startup programs of Italy.</p>
-          <p>I've lived in Torino, in Florence, and travelled around with my partners.</p>
-          <p>Since 2019 I've been living in Luxembourg, where RoomMate has thrived as prominent startup of the country ecosystem and and source of the ones of the most respected Property Management System in the European Market.</p>
-
+          <p>I graduated in Bologna with a degree in computer engineering in 2017.</p>
+          <p>In the same year, RoomMate, a personal project became my ticket into one of Italy's most prestigious startup programs. </p>
+          <p>I have lived in Torino and Florence and traveled around Europe with my partners.</p>
+          <p>Since 2019, I have been living in Luxembourg, where RoomMate has thrived as a prominent startup in the country's ecosystem and as a source of one of the most respected Property Management Systems in the European market.</p>
           <p>On 2023 RoomMate joined Joivy, and our efforts expanded into creating the most innovative IT platform to one of the leading players in the residential market in Europe.</p>
-
           <br />
           <p>~</p>
           <br />
@@ -80,7 +74,6 @@ const AboutPage = () => {
 
 AboutPage.Layout = Layout;
 
-export const Head = () => <Seo title="About Me" />
+export const Head = () => <Seo title="About Me" description="Matteo Bucci: Computer Engineer from Bologna, tech enthusiast, and key player in Europe's tech startup scene. Spearheaded RoomMate's growth and its integration with Joivy in 2023." />
 
-// Step 3: Export your component
 export default AboutPage

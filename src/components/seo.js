@@ -49,22 +49,22 @@ const Seo = ({
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`, // you can set this if you have a twitter username
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+        // {
+        //   name: `twitter:card`,
+        //   content: `summary`,
+        // },
+        // {
+        //   name: `twitter:creator`, 
+        //   content: site.siteMetadata?.author || ``,
+        // },
+        // {
+        //   name: `twitter:title`,
+        //   content: title,
+        // },
+        // {
+        //   name: `twitter:description`,
+        //   content: metaDescription,
+        // },
       ]
         .concat(
           metaImage
@@ -81,16 +81,16 @@ const Seo = ({
                 property: 'og:image:height',
                 content: metaImage.height,
               },
-              {
-                name: 'twitter:card',
-                content: 'summary_large_image',
-              },
+              // {
+              //   name: 'twitter:card',
+              //   content: 'summary_large_image',
+              // },
             ]
             : [
-              {
-                name: 'twitter:card',
-                content: 'summary',
-              },
+              // {
+              //   name: 'twitter:card',
+              //   content: 'summary',
+              // },
             ]
         )
         .concat(meta)}

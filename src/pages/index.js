@@ -12,22 +12,17 @@ const IndexPage = ({ data }) => {
   const [isWhyOpen, setIsWhyOpen] = React.useState(false);
   const [isStatsOpen, setIsStatsOpen] = React.useState(false);
 
-  console.log(data);
-
   return (
     <div>
       <div className="grid">
         <div>
           <TypingIntroduction />
 
-
           <p>Welcome to my little internet space</p>
 
           <img className='home-divisor' alt='' src={sea} />
 
           <p>In <Link to="/about">this page</Link> I introduce myself properly</p>
-
-
 
           {/* <h2>Still on this page?</h2>
 
@@ -41,7 +36,7 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div>
-          <h2>Latest entries</h2>
+          <h2>Latest blog entries</h2>
           {data.latest.edges.map((item) => {
             const node = item.node;
             return (

@@ -17,6 +17,12 @@ const config: GatsbyConfig = {
         extensions: [".mdx", ".md"]
       },
     },
+    {
+      resolve: `gatsby-plugin-cloudflare-web-analytics`,
+      options: {
+        token: "16ebff6b15494b2789e2c6c7ece4d1de",
+      },
+    },
     "gatsby-transformer-sharp",
     /** This should make available files like custom css and more */
     {

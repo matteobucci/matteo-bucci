@@ -47,6 +47,13 @@ const config: GatsbyConfig = {
         name: `blog`,
         path: `${__dirname}/content/blog/`,
       },
+    },    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `notion-pages`,
+        path: `${__dirname}/content/notion-pages/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
